@@ -2,3 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run lint-staged
+yarn detox-android-build
+git add android/app/build/outputs/apk -f
+git commit --amend -C HEAD --no-verify
