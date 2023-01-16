@@ -36,13 +36,12 @@ jobs:
           target: google_apis
           arch: x86_64
           name: Pixel_3a_API_33_arm64-v8a
-          script: npx detox build --configuration android.emu.release
+          script: npx detox test --configuration android.emu.release
  
         
 
 
-    - name: Android Detox test
-      run: npx detox test --configuration android.emu.release
+
 
 
 
