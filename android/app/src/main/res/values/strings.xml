@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Groyyo</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">ynBKEBHXWr9nEbYkiYNJ8cM8qQZ-9baRxxBTo</string>
+</resources>
