@@ -37,9 +37,9 @@ public class MainApplication extends Application implements ReactApplication {
         }
 
          @Override
-+        protected String getJSBundleFile() {
-+            return CodePush.getJSBundleFile();
-+       }
+        protected String getJSBundleFile() {
+            return CodePush.getJSBundleFile();
+       }
       };
 
   private final ReactNativeHost mNewArchitectureNativeHost =

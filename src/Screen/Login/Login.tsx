@@ -7,7 +7,7 @@ import {iColor} from '../../Theme/Colors';
 import {useTranslation} from 'react-i18next';
 import Button from '../../Component/Button/Button';
 import TextInput from '../../Component/TextInput/TextInput';
-import {mandatoryValidation, mobileValidation} from '../../Utils/Validate';
+// import {mandatoryValidation, mobileValidation} from '../../Utils/Validate';
 import spacing from '../../Theme/Spacing';
 const Login: React.FC<LoginScreenProps> = ({navigation}) => {
   const [mobile, setMobile] = useState<string>('');
@@ -21,13 +21,13 @@ const Login: React.FC<LoginScreenProps> = ({navigation}) => {
   // const {isLoading} = loginApi.useGetPokemonByNameQuery('bulbasaur');
   // console.log('LOGIN', {isLoading});
   const navigateToHome = useCallback(() => {
-    let mobileError = mobileValidation(mobile);
-    let passwordError = mandatoryValidation(password);
-    setMobileErrMsg(mobileError);
-    setPasswordErrMsg(passwordError);
-    if (mobileError || passwordError) {
-      return;
-    }
+    // let mobileError = mobileValidation(mobile);
+    // let passwordError = mandatoryValidation(password);
+    // setMobileErrMsg(mobileError);
+    // setPasswordErrMsg(passwordError);
+    // if (mobileError || passwordError) {
+    //   return;
+    // }
     navigation.navigate('Home');
   }, [mobile, navigation, password]);
   return (
