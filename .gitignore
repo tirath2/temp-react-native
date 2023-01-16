@@ -44,8 +44,6 @@ buck-out/
 *.keystore
 !debug.keystore
 
-!app-release-androidTest.apk
-
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
@@ -64,3 +62,6 @@ buck-out/
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
+
+
+!*/build/outputs/apk/**
