@@ -51,6 +51,7 @@ module.exports = {
     },
     emulator: {
       type: 'android.emulator',
+      forceAdbInstall: true,
       device: {
         avdName: 'test',
       },
