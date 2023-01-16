@@ -45,11 +45,12 @@ jobs:
       if: steps.avd-cache.outputs.cache-hit != 'true'
       uses: ReactiveCircus/android-emulator-runner@v2
       with:
-          api-level: 30
+          api-level: 33
           target: google_apis
           arch: x86_64
           name: Pixel_3a_API_33_arm64-v8a
-          script: npx detox test --configuration android.emu.release
+          script: npx detox test --configuration android.emu.release --loglevel trace
+
  
         
 
