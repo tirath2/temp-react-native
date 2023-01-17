@@ -60,7 +60,7 @@ on: [push]
 jobs:
   build:
     runs-on: macos-latest
-    timeout-minutes: 15
+    timeout-minutes: 40
 
 
 
