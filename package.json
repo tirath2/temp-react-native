@@ -12,8 +12,8 @@
     "husky-install": "husky install",
     "detox-android-build": " npx detox build  --configuration android.emu.release",
     "detox-android-test": " npx detox test  --configuration android.emu.release",
-    "detox-ios-build": " npx detox build  --configuration android.emu.release",
-    "detox-ios-test": " npx detox test  --configuration android.emu.release"
+    "detox-ios-build": " npx detox build  --configuration ios.sim.release",
+    "detox-ios-test": " npx detox test --configuration ios.sim.release"
   },
   "dependencies": {
     "@react-native-masked-view/masked-view": "^0.2.8",

@@ -3,5 +3,7 @@
 
 npm run lint-staged
 yarn detox-android-build
+yarn detox-ios-build
 git add android/app/build/outputs/apk -f
+git add ios/build/Build/Products/Release-iphonesimulator/ -f
 git commit --amend -C HEAD --no-verify
