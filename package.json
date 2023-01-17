@@ -9,9 +9,14 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-staged": "lint-staged --config lint-staged.js",
-    "husky-install": "husky install"
+    "husky-install": "husky install",
+    "detox-android-build": " npx detox build  --configuration android.emu.release",
+    "detox-android-test": " npx detox test  --configuration android.emu.release",
+    "detox-ios-build": " npx detox build  --configuration android.emu.release",
+    "detox-ios-test": " npx detox test  --configuration android.emu.release"
   },
   "dependencies": {
+    "@react-native-masked-view/masked-view": "^0.2.8",
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.7",
     "@reduxjs/toolkit": "^1.9.1",

@@ -6,7 +6,7 @@ module.exports = {
       config: 'e2e/jest.config.js',
     },
     jest: {
-      setupTimeout: 120000,
+      setupTimeout: 520000,
     },
   },
   apps: {
@@ -51,8 +51,9 @@ module.exports = {
     },
     emulator: {
       type: 'android.emulator',
+      forceAdbInstall: true,
       device: {
-        avdName: 'Pixel_3a_API_33_arm64-v8a',
+        avdName: 'test',
       },
     },
   },
