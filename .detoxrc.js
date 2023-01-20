@@ -53,7 +53,7 @@ module.exports = {
       type: 'android.emulator',
       forceAdbInstall: true,
       device: {
-        avdName: 'test',
+        avdName: 'Pixel_3a_API_33_arm64-v8a',
       },
     },
   },
