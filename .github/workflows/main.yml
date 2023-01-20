@@ -39,23 +39,9 @@ jobs:
         with:
           java-version: 11
           distribution: 'adopt'
-          cache: 'gradle'
-          
 
-      - name: Gradle cache
-        uses: gradle/gradle-build-action@v2
-        
-      - name: AVD cache
-        uses: actions/cache@v3
-        id: avd-cache
-        with:
-            path: |
-              ~/.android/avd/*
-              ~/.android/adb*
-            key: avd-33
 
       - name: create AVD and generate snapshot for caching
-        if: steps.avd-cache.outputs.cache-hit != 'true'
         uses: ReactiveCircus/android-emulator-runner@v2
         with:
             api-level: 33
@@ -65,7 +51,6 @@ jobs:
             script: npx detox test --configuration android.emu.release --loglevel trace
 
       - name: Rebuild detox
-        if: steps.cache.outputs.cache-hit == 'true'
         run: yarn detox clean-framework-cache && yarn detox build-framework-cache
 
       - uses: maxim-lobanov/setup-xcode@v1
