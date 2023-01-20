@@ -50,12 +50,14 @@ jobs:
             name: Pixel_3a_API_33_arm64-v8a
             script: npx detox test --configuration android.emu.release --loglevel trace
 
-      - name: Rebuild detox
-        run: yarn detox clean-framework-cache && yarn detox build-framework-cache
 
       - uses: maxim-lobanov/setup-xcode@v1
         with:
             xcode-version: 14.1
+            
+      - name: Rebuild detox
+        run: yarn detox clean-framework-cache && yarn detox build-framework-cache
+ 
       
       - run: brew tap wix/brew
       - run: brew install applesimutils
