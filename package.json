@@ -7,9 +7,12 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-staged": "lint-staged --config lint-staged.js",
     "husky-install": "husky install",
+    "test:ci": "jest --json --outputFile=jest-report.json",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "preci": "rm -fr node_modules",
+    "ci": "yarn install --frozen-lockfile",
     "detox-android-build": " npx detox build  --configuration android.emu.release",
     "detox-android-test": " npx detox test  --configuration android.emu.release",
     "detox-ios-build": " npx detox build  --configuration ios.sim.release",
@@ -56,5 +59,23 @@
     "metro-react-native-babel-preset": "0.72.3",
     "react-test-renderer": "18.1.0",
     "typescript": "^4.8.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "prettier src --write",
+      "eslint src --fix",
+      "git add"
+    ]
   }
 }

@@ -1,0 +1,30 @@
+name: Develop Updated
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  versioning:
+    uses: ./.github/workflows/release.yml
+    with:
+      tag-suffix: dev
+      release-title: Dev Build
+    secrets: inherit
+
+  # Second Job
+  build-and-release-android:
+    needs: versioning
+    uses: ./.github/workflows/build-android.yml
+    with:
+      environment: release
+      publish: true
+    secrets: inherit
+
+  # Third Job
+  build-and-release-ios:
+    needs: versioning
+    uses: ./.github/workflows/build-ios.yml
+    with:
+      publish: true
+    secrets: inherit
