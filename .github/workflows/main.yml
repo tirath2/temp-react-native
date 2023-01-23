@@ -1,11 +1,8 @@
 name: Pull Request into Main, Develop and UAT
 
 on:
-  pull_request:
-    branches:
-      - 'main'
-      - 'develop'
-      - 'uat'
+  push:
+    branches: [develop]
 
 jobs:
   #First job
